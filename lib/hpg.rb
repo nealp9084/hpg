@@ -9,7 +9,7 @@ module HPG
 
     def initialize
       # set up logger
-      if defined?(Rails.logger)
+      if defined?(Rails.logger) && Rails.logger
         @logger = Rails.logger
       else
         @logger = Logging.logger(STDOUT)
